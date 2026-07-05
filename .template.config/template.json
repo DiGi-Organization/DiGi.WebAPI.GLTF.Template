@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "DigiProject",
+  "classifications": [ "Web", "WebAPI", "DiGi", "glTF", "3D" ],
+  "identity": "DiGi.WebAPI.GLTF.Template",
+  "name": "DiGi.WebAPI.GLTF.Template",
+  "description": "ASP.NET Core Web API pre-configured with the generic DiGi.GLTF 3D visualization engine: generic GLTFScene composition and binary glTF (.glb) streaming endpoints, response compression and the IGLTFNodeConverter plugin registration hook. Create the solution folder directly under the DigiProject workspace root so the DiGi DLL references resolve.",
+  "shortName": "digiwebapigltftemplate",
+  "sourceName": "DiGi.WebAPI.GLTF.Template",
+  "preferNameDirectory": true,
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net10.0",
+          "description": "Target net10.0"
+        }
+      ],
+      "replaces": "net10.0",
+      "defaultValue": "net10.0"
+    },
+    "RelativeRefPath": {
+      "type": "generated",
+      "generator": "constant",
+      "parameters": {
+        "value": "..\\..\\DiGi"
+      },
+      "replaces": "..\\..\\..\\DiGi"
+    }
+  },
+  "sources": [
+    {
+      "exclude": [
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        "**/.vs/**"
+      ]
+    }
+  ]
+}

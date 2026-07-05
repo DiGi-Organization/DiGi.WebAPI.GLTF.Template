@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- NetTopologySuite and SharpGLTF are NuGet dependencies of DiGi.Geometry and DiGi.GLTF
+		     (referenced via HintPath below), so they must be re-added here to reach the application output. -->
+		<PackageReference Include="NetTopologySuite" Version="2.6.0" />
+		<PackageReference Include="SharpGLTF.Toolkit" Version="1.0.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- The paths assume the solution folder sits directly under the DigiProject workspace root:
+		     DigiProject\<SolutionName>\<ProjectName>\<ProjectName>.csproj -->
+		<Reference Include="DiGi.Core">
+			<HintPath>..\..\..\DiGi.Core\bin\DiGi.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="DiGi.Geometry">
+			<HintPath>..\..\..\DiGi.Geometry\bin\DiGi.Geometry.dll</HintPath>
+		</Reference>
+		<Reference Include="DiGi.GLTF">
+			<HintPath>..\..\..\DiGi.GLTF\bin\DiGi.GLTF.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>
