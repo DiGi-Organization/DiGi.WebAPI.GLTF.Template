@@ -9,9 +9,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<!-- NetTopologySuite and SharpGLTF are NuGet dependencies of DiGi.Geometry and DiGi.GLTF
-		     (referenced via HintPath below), so they must be re-added here to reach the application output. -->
+		<!-- NetTopologySuite, QuikGraph and SharpGLTF are NuGet dependencies of DiGi.Geometry and DiGi.GLTF
+		     (referenced via HintPath below), so they must be re-added here to reach the application output.
+		     MathNet.Numerics comes one level deeper, from the DiGi.Math assembly DiGi.Geometry itself uses. -->
+		<PackageReference Include="MathNet.Numerics" Version="5.0.0" />
 		<PackageReference Include="NetTopologySuite" Version="2.6.0" />
+		<PackageReference Include="QuikGraph" Version="2.5.0" />
 		<PackageReference Include="SharpGLTF.Toolkit" Version="1.0.6" />
 	</ItemGroup>
 
