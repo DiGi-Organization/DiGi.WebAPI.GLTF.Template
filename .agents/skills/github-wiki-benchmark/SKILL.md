@@ -8,15 +8,15 @@ description: Use when authoring or updating the Benchmark page on a DiGi reposit
 Standard for authoring the **`Benchmark`** page on a DiGi repo's GitHub Wiki, so every repo presents performance data the same way. Read this before creating or updating benchmark docs.
 
 Reference implementations that follow this standard:
-- **DiGi.Geometry** (native CPU query comparisons) — https://github.com/ZiolkowskiJakub/DiGi.Geometry/wiki/Benchmark
-- **DiGi.ComputeSharp** (GPU vs CPU) — https://github.com/ZiolkowskiJakub/DiGi.ComputeSharp/wiki/Benchmark
+- **DiGi.Geometry** (native CPU query comparisons) — https://github.com/DiGi-Organization/DiGi.Geometry/wiki/Benchmark
+- **DiGi.ComputeSharp** (GPU vs CPU) — https://github.com/DiGi-Organization/DiGi.ComputeSharp/wiki/Benchmark
 
 ## Purpose & scope
 A `Benchmark` page documents **reproducible** performance (and, where relevant, correctness) comparisons. Every number must come from a committed `[Fact]` test in that repo's `*.xUnit` project so a reader can re-run it rather than trust a one-off snapshot. **The page lives on the wiki of the repo whose methods it benchmarks** (e.g. a `DiGi.Geometry.Planar.Query` comparison → the DiGi.Geometry wiki, backed by a test in `DiGi.Geometry.xUnit`). Method names are always fully namespace-qualified; if an entry compares a method from another assembly, qualify that too and keep the page on the repo owning the primary subject under test.
 
 ## Location, file & sync
 See `github-wiki-general` for full mechanics. In short:
-- **File:** `Benchmark.md` at the wiki clone root (`DigiProject/wiki/<repo>.wiki/Benchmark.md`), rendered at `.../<repo>/wiki/Benchmark`.
+- **File:** `Benchmark.md` at the wiki clone root (`DiGi/wiki/<repo>.wiki/Benchmark.md`), rendered at `.../<repo>/wiki/Benchmark`.
 - **Branch `master`:** commit and `git push origin HEAD` to publish — a page doesn't exist until pushed.
 - **Hand-authored:** the sync only copies generated `documentation/API/*` pages, so it never deletes `Benchmark.md` — edit and push it directly.
 - **Link it from `Home.md`** so it is discoverable.

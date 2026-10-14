@@ -71,8 +71,8 @@ Never inline megabytes of base64 into the page.
 The fastest path is the `dotnet new` template (see template section). Do the steps below manually only when
 integrating glTF into an existing project.
 
-1. **Location.** Create the solution folder directly under the `DigiProject` workspace root:
-   `DigiProject\<SolutionName>\<ProjectName>\`. The `DiGi.*` DLL references resolve by relative
+1. **Location.** Create the solution folder directly under the `DiGi` workspace root:
+   `DiGi\<SolutionName>\<ProjectName>\`. The `DiGi.*` DLL references resolve by relative
    `HintPath` (`..\..\DiGi.Core\bin\...`), so the two-levels-up depth matters.
 
 2. **Project SDK.** Use `Microsoft.NET.Sdk.Web`, `net10.0`, `<Nullable>enable</Nullable>`,

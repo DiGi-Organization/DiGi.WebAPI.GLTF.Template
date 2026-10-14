@@ -19,8 +19,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<!-- The paths assume the solution folder sits directly under the DigiProject workspace root:
-		     DigiProject\<SolutionName>\<ProjectName>\<ProjectName>.csproj -->
+		<!-- The paths assume the solution folder sits directly under the DiGi workspace root:
+		     DiGi\<SolutionName>\<ProjectName>\<ProjectName>.csproj -->
 		<Reference Include="DiGi.Core">
 			<HintPath>..\..\..\DiGi.Core\bin\DiGi.Core.dll</HintPath>
 		</Reference>
